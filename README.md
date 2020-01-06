@@ -4,7 +4,7 @@ Script Bash per avviare Apache e MySQL contemporaneamente: richiede systemd, il 
 
 È possibile richiamare direttamente lo script .sh nel Terminale oppure eseguirlo, più velocemente, da un Avviatore o inserendo quest'ultimo nel pannello così da averlo sempre a portata di mano.
 
-Una volta scaricato e scompattato il pacchetto .zip occorre modificare il file "lamp" (l'avviatore .desktop) cambiando, nel codice, i due percorsi al file .sh e all'icona .png (Exec e Icon).
+Occorre modificare il file "lamp" (l'avviatore .desktop) cambiando, nel codice, i due percorsi al file .sh e all'icona .png (Exec e Icon).
 
 Infine, rendere eseguibile lo script con chmod +x lamp.sh
 
