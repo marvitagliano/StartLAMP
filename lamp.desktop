@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=LAMP
+Comment=
+Exec=xfce4-terminal --geometry=85x28+400+400 -x sudo /home/<user>/lamp.sh
+Icon=/home/<user>/lamp.png
+Path=
+Terminal=false
+StartupNotify=false
+Name[it_IT]=LAMP
