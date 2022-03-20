@@ -8,4 +8,5 @@ Occorre modificare il file "lamp" (l'avviatore .desktop) cambiando, nel codice, 
 
 Infine, rendere eseguibile lo script con chmod +x lamp.sh
 
-Ecco lo script in esecuzione: <img src="https://i.imgur.com/ocayFrG.png" />
+Ecco lo script in esecuzione: 
+![startLAMP](https://user-images.githubusercontent.com/59565800/159156791-7ea89fa9-7d5c-498c-87f6-11988358e07d.png)
