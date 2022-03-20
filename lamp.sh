@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Start LAMP 1.0.1
+# Start LAMP 1.0.2
 # Author and copyright (C): Marcello Vitagliano
 # License: GNU General Public License
 
@@ -16,8 +16,8 @@ do
 	echo -e "\n  \e[1m---- START / STOP - APACHE / MYSQL ----\e[0m \n";
 	echo -e "  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯";
 
-	echo -e "\n  \e[1;42m a \e[0m Avvia Apache e MySQL            \e[1;41m f \e[0m Ferma Apache e MySQL \n\n  \e[1;44m r \e[0m Riavvia Apache                  \e[1;44m p \e[0m Ricarica configurazione php.ini \n\n  \e[1;41m b \e[0m Abilita Apache/MySQL al boot    \e[1;41m d \e[0m Disabilita Apache/MySQL al boot  \n\n  \e[1;105m c \e[0m Controlla lo stato              \e[1;100m x \e[0m Esci\n\n";
-
+	echo -e "\n  \e[1;42m a \e[0m Avvia Apache e MySQL            \e[1;41m f \e[0m Ferma Apache e MySQL \n\n  \e[1;44m r \e[0m Riavvia Apache                  \e[1;44m p \e[0m Ricarica configurazione php.ini \n\n  \e[1;41m b \e[0m Abilita Apache/MySQL al boot    \e[1;41m d \e[0m Disabilita Apache/MySQL al boot  \n\n  \e[1;105m c \e[0m Controlla lo stato              \e[1;43m v \e[0m Versioni     \e[1;100m x \e[0m Esci\n\n";
+	
 	if [ "`systemctl is-active apache2.service`" == "active" ] 
 		then 
 			echo -e "  \e[92m⚫\e[0mApache in esecuzione";
@@ -78,6 +78,15 @@ do
 		systemctl disable apache2.service
 		systemctl disable mysql.service
 		sleep 2
+		clear;
+		
+		
+	elif [ $opzione == "v" ]; then
+		
+		printf "\n " && apache2 -v
+		printf "\n " && php -v
+		printf "\n " && mysql -V
+		sleep 8
 		clear;
 				
 	elif [ $opzione == "c" ]; then	
