@@ -1,4 +1,4 @@
-# StartLAMP
+# StartLAMP 1.0.2
 
 Script Bash per avviare Apache e MySQL contemporaneamente: richiede systemd, il sistema di init già installato di default a partire da Ubuntu 15.04 e da Debian 8.
 
