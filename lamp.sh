@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Start LAMP 1.0.2
+# Start LAMP 1.0.3
 # Author and copyright (C): Marcello Vitagliano
 # License: GNU General Public License
 
@@ -20,7 +20,7 @@ do
 	
 	if [ "`systemctl is-active apache2.service`" == "active" ] 
 		then 
-			echo -e "  \e[92m⚫\e[0mApache in esecuzione";
+			echo -e "  \e[92m⚫\e[0mApache in esecuzione"; 
 		else
 			echo -e "  \e[31m◼\e[0m Apache fermo";
 	fi 
@@ -83,11 +83,12 @@ do
 		
 	elif [ $opzione == "v" ]; then
 		
-		printf "\n " && apache2 -v
-		printf "\n " && php -v
+		printf "\n " && apache2 -v | head -n 1
+		printf "\n " && php -v | head -n 1
 		printf "\n " && mysql -V
 		sleep 8
 		clear;
+
 				
 	elif [ $opzione == "c" ]; then	
 
