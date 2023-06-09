@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Start LAMP 1.0.3
+# Start LAMP 1.0.4
 # Author and copyright (C): Marcello Vitagliano
 # License: GNU General Public License
 
@@ -61,8 +61,7 @@ do
 		
 	elif [ $opzione == "p" ]; then
 		
-		sudo systemctl reload apache2.service
-		echo -e "  \e[95m🔃\e[0mConfigurazione php.ini ricaricata"
+		systemctl -q is-active apache2 && sudo systemctl reload apache2.service && echo -e "  \e[95m🔃\e[0mConfigurazione php.ini ricaricata" || echo -e "  \e[1;31m Avvia prima Apache \e[0m"
 		sleep 2
 		clear;
 		
