@@ -1,4 +1,4 @@
-# StartLAMP 1.0.4
+# StartLAMP 1.0.5
 
 Script Bash per avviare Apache e MySQL contemporaneamente: richiede "systemd".
 
